@@ -1,5 +1,5 @@
 
-import { Button } from "@/components/ui/card";
+import { Button } from "@/components/ui/button";
 import { Trophy, Award, PartyPopper, ArrowRight } from "lucide-react";
 
 interface GameOverProps {
@@ -18,13 +18,13 @@ const GameOver = ({ score, onRestart }: GameOverProps) => {
   };
 
   const getMessage = getFunnyMessage();
-  const awardIcon = score >= 700 ? Trophy : score >= 300 ? Award : PartyPopper;
+  const AwardIcon = score >= 700 ? Trophy : score >= 300 ? Award : PartyPopper;
 
   return (
     <div className="text-center space-y-6 bg-gradient-to-b from-purple-50 to-white p-8 rounded-xl shadow-lg max-w-md mx-auto">
       <div className="flex justify-center">
         <div className="rounded-full bg-primary/10 p-4 animate-bounce-slow">
-          <awardIcon className="h-12 w-12 text-primary" />
+          <AwardIcon className="h-12 w-12 text-primary" />
         </div>
       </div>
       

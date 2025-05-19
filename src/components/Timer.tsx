@@ -1,6 +1,7 @@
 
 import { useEffect, useState } from "react";
 import { Progress } from "@/components/ui/progress";
+import { cn } from "@/lib/utils";
 
 interface TimerProps {
   initialTime: number;
@@ -54,8 +55,7 @@ const Timer = ({ initialTime, isRunning, onTimeUp }: TimerProps) => {
       </div>
       <Progress 
         value={progress} 
-        className="h-3 transition-all" 
-        indicatorClassName={getColorClass()}
+        className={cn("h-3 transition-all", getColorClass())} 
       />
     </div>
   );
