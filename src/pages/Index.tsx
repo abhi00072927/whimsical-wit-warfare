@@ -1,7 +1,6 @@
-
 import { useState, useEffect, useCallback } from 'react';
 import { Button } from '@/components/ui/button';
-import { Gamepad2, Play, Import, Export } from 'lucide-react';
+import { Gamepad2, Play, FileImport, FileExport } from 'lucide-react';
 import { useToast } from "@/components/ui/use-toast";
 import Timer from '@/components/Timer';
 import ScoreDisplay from '@/components/ScoreDisplay';
@@ -298,8 +297,8 @@ const Index = () => {
           {/* AGH International Import Export Heading */}
           <div className="flex items-center gap-2 bg-gradient-to-r from-accent to-secondary p-3 rounded-lg shadow-md">
             <div className="flex gap-1">
-              <Import className="h-6 w-6 text-primary-foreground" />
-              <Export className="h-6 w-6 text-primary-foreground" />
+              <FileImport className="h-6 w-6 text-primary-foreground" />
+              <FileExport className="h-6 w-6 text-primary-foreground" />
             </div>
             <div>
               <h2 className="text-xl font-bold text-primary-foreground">AGH</h2>
