@@ -1,7 +1,7 @@
 
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
-import { ShoppingCart, Cake } from "lucide-react";
+import { ShoppingCart, Cake, Globe } from "lucide-react";
 import { useCart } from "@/contexts/CartContext";
 
 export function Navbar() {
@@ -21,6 +21,10 @@ export function Navbar() {
           </Link>
           <Link to="/cakes" className="text-gray-600 hover:text-primary font-medium">
             Cakes
+          </Link>
+          <Link to="/business" className="text-gray-600 hover:text-primary font-medium">
+            <Globe className="h-4 w-4 inline mr-1" />
+            AGH Business
           </Link>
           <Link to="/cart" className="relative">
             <Button variant="outline" className="relative">

@@ -10,6 +10,7 @@ import Home from "./pages/Home";
 import CakeList from "./pages/CakeList";
 import CakeDetails from "./pages/CakeDetails";
 import Cart from "./pages/Cart";
+import Business from "./pages/Business";
 import { CartProvider } from "@/contexts/CartContext";
 
 const queryClient = new QueryClient();
@@ -27,6 +28,7 @@ const App = () => (
             <Route path="/cake/:id" element={<CakeDetails />} />
             <Route path="/cart" element={<Cart />} />
             <Route path="/game" element={<Index />} />
+            <Route path="/business" element={<Business />} />
             {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
             <Route path="*" element={<NotFound />} />
           </Routes>
