@@ -1,7 +1,7 @@
 
 import { useState, useEffect, useCallback } from 'react';
 import { Button } from '@/components/ui/button';
-import { Gamepad2, Play } from 'lucide-react';
+import { Gamepad2, Play, Import, Export } from 'lucide-react';
 import { useToast } from "@/components/ui/use-toast";
 import Timer from '@/components/Timer';
 import ScoreDisplay from '@/components/ScoreDisplay';
@@ -285,14 +285,28 @@ const Index = () => {
   return (
     <div className="min-h-screen bg-gradient-to-b from-purple-50 to-white py-8 px-4">
       <div className="max-w-5xl mx-auto">
-        {gameState.status !== 'ready' && (
-          <div className="flex justify-between items-center mb-6">
-            <div className="flex items-center gap-2">
-              <Gamepad2 className="h-8 w-8 text-primary" />
-              <h1 className="text-3xl font-bold text-primary">Word Giggles</h1>
+        <div className="flex justify-between items-center mb-6">
+          <div className="flex items-center gap-2">
+            {gameState.status !== 'ready' && (
+              <>
+                <Gamepad2 className="h-8 w-8 text-primary" />
+                <h1 className="text-3xl font-bold text-primary">Word Giggles</h1>
+              </>
+            )}
+          </div>
+
+          {/* AGH International Import Export Heading */}
+          <div className="flex items-center gap-2 bg-gradient-to-r from-accent to-secondary p-3 rounded-lg shadow-md">
+            <div className="flex gap-1">
+              <Import className="h-6 w-6 text-primary-foreground" />
+              <Export className="h-6 w-6 text-primary-foreground" />
+            </div>
+            <div>
+              <h2 className="text-xl font-bold text-primary-foreground">AGH</h2>
+              <p className="text-sm text-white">International Import Export</p>
             </div>
           </div>
-        )}
+        </div>
         
         {renderGame()}
       </div>
